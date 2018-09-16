@@ -9,4 +9,6 @@ then
 		fi
 	fi
 	rmdir /mnt/ramdisk/increaseVolume.lock/
+else
+	`$0 &`
 fi
