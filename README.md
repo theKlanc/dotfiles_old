@@ -37,4 +37,8 @@ And then run the install script
 
 ## TO-DO
 
--/
+- [ ] Add font installation to script
+- [ ] Add betterlockscreen config
+- [ ] Add greeter config
+- [ ] Move internal scripts to scripts/internal/
+- [ ] Move image scripts to scripts/
