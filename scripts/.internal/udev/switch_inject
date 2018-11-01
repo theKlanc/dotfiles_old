@@ -1,0 +1,3 @@
+#!/bin/sh
+notify-send "Nintendo Switch" "Payload injected"
+python3 /home/klanc/Documents/Switch/fusee-launcher/fusee-launcher.py /home/klanc/Documents/Switch/payloads/fusee-primary.bin

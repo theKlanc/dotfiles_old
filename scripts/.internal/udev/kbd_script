@@ -1,0 +1,8 @@
+#!/bin/sh
+notify-send "Keyboard" "Plugged in"
+sleep 1
+DISPLAY=:0
+HOME=/home/klanc/
+XAUTHORITY=$HOME/.Xauthority
+export DISPLAY XAUTHORITY HOME
+setxkbmap es

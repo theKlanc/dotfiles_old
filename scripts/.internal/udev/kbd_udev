@@ -1,0 +1,5 @@
+#!/bin/sh
+export DISPLAY=:0
+export XAUTHORITY=/home/klanc/.Xauthority
+export DBUS_SESSION_BUS_ADDRESS="unix:path=/run/user/1000/bus"
+i3-msg exec /home/klanc/.scripts/kbd_script &

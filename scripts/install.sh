@@ -1,5 +1,6 @@
 #!/bin/sh
-
+echo "To actually use this, edit this file and remove the 2nd and 3rd lines"
+exit
 if [ -z "$HOME" ];then
     tempath=`pwd`
     cd ~
@@ -47,7 +48,7 @@ $HOME/.dotfiles/scripts/setWallpaper.sh $HOME/.dotfiles/images/wallpaper.png
     #### i3 config is generated at boot by adding configs/i3.conf and sensitive/i3extra.conf      ln -sf $HOME/.dotfiles/configs/i3.conf $HOME/.config/i3/config
     ln -sf $HOME/.dotfiles/configs/inputrc.conf $HOME/.inputrc
     ln -sf $HOME/.dotfiles/configs/polybar.conf $HOME/.config/polybar/config
-    ln -sf $HOME/.dotfiles/configs/polybarLaunch.conf $HOME/.config/polybar/launch.sh
+    ln -sf $HOME/.dotfiles/scripts/.internal/polybarLaunch.sh $HOME/.config/polybar/launch.sh
     ln -sf $HOME/.dotfiles/configs/profile.conf $HOME/.profile
     ln -sf $HOME/.dotfiles/configs/vimrc.conf $HOME/.vimrc
     ln -sf $HOME/.dotfiles/configs/Xresources.conf $HOME/.Xresources
@@ -64,10 +65,10 @@ $HOME/.dotfiles/scripts/setWallpaper.sh $HOME/.dotfiles/images/wallpaper.png
 
 
     ## Scripts
-    ln -sf $HOME/.dotfiles/scripts/.internal/increaseVolume.sh $HOME/.scripts/increaseVolume
-    ln -sf $HOME/.dotfiles/scripts/.internal/logoutCleanup.sh $HOME/.scripts/logoutCleanup
-    ln -sf $HOME/.dotfiles/scripts/.internal/off.sh $HOME/.scripts/off
-    ln -sf $HOME/.dotfiles/scripts/.internal/restart.sh $HOME/.scripts/restart
-    ln -sf $HOME/.dotfiles/scripts/.internal/lightdmSessionStartup.sh $HOME/.scripts/lightdmSessionStartup.sh
-    ln -sf $HOME/.scripts/off $HOME/.scripts/poweroff
-    ln -sf $HOME/.scripts/restart $HOME/.scripts/reboot
+    mkdir $HOME/.scripts/
+    mkdir $HOME/.scripts/udev
+
+    ln -sf $HOME/.dotfiles/scripts/.internal/off $HOME/.dotfiles/scripts/.internal/poweroff
+    ln -sf $HOME/.dotfiles/scripts/.internal/restart $HOME/.dotfiles/scripts/.internal/reboot
+
+    ln -sf $HOME/.dotfiles/scripts/.internal $HOME/.scripts
