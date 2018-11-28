@@ -21,9 +21,9 @@ if [ "$answer" != "${answer#[Yy]}" ] ;then
     then
         echo "You're not using arch! TRAITOR!"
     else
-        echo Welp, buckle up!
+        echo "Welp, buckle up!"
         pacman -S --noconfirm git sudo
-        git clone https://aur.archlinux.com/yay
+        git clone https://aur.archlinux.org/yay
         cd yay
         makepkg -si --noconfirm
         cd ..
@@ -31,7 +31,9 @@ if [ "$answer" != "${answer#[Yy]}" ] ;then
         sudo echo "[multilib]" >> /etc/pacman.conf
         sudo echo "Include = /etc/pacman.d/mirrorlist" >> /etc/pacman.conf
         yay -Syu --noconfirm
-        yay -S --noconfirm rxvt-unicode xorg nvidia nvidia-utils zsh i3 oh-my-zsh-git chromium-vaapi-bin polybar mpv vim openssh lightdm betterlockscreen-git vmware-workstation clion prismatik steam gimp inkscape feh pactl mupdf dunst compton ncdu youtube-dl wine winetricks protontricks-git elinks ranger unzip unrar udiskie texlive-most teamviewer teamspeak streamlink-twitch-gui sdl2 rofi radare2 radare2-cutter polkit htop imagemagick ntfs-3g notepadqq neofetch ncmpcpp mpv-mpris mimeo linux-headers android-studio flameshot copyq
+        yay -S --noconfirm wine-stable imagemagick rxvt-unicode xorg nvidia nvidia-utils zsh i3 oh-my-zsh-git chromium-vaapi-bin polybar mpv vim openssh lightdm 
+betterlockscreen-git vmware-workstation 
+clion prismatik steam gimp inkscape feh pactl mupdf dunst compton ncdu youtube-dl wine winetricks protontricks-git elinks ranger unzip unrar udiskie texlive-most teamviewer teamspeak streamlink-twitch-gui sdl2 rofi radare2 radare2-cutter polkit htop imagemagick ntfs-3g notepadqq neofetch ncmpcpp mpv-mpris mimeo linux-headers android-studio flameshot copyq
         #install fonts?
     fi
 else

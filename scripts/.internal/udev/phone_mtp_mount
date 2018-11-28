@@ -1,0 +1,2 @@
+#!/bin/sh
+aft-mtp-mount -o allow_other /mnt/s7 >> /tmp/aftLog
