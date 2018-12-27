@@ -23,6 +23,8 @@ else
 	if [[ $pantallaDVI -eq "1" ]]
         then
 		polybar barLeft &
+	else
+		polybar barTele &
 	fi
 fi
 echo "Bar(s) launched..."
