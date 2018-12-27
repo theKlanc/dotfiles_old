@@ -1,0 +1,13 @@
+[options]
+slideshow-interval=0.2
+max-depth=1
+transparent-background=1
+fade=1
+lazy-load=1
+disable-backends=archive,archive_cbx
+end-of-files-action=wrap
+[keybindings]
+1 {command(mv $1 ~/Pictures/);}
+2 {command(mv $1 ~/Pictures/2D/);}
+3 {command(mv $1 ~/Pictures/3D/);}
+<Delete> {command(trash $1);}
