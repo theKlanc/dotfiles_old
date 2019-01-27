@@ -1,5 +1,0 @@
-#!/bin/sh
-homeDir=/home/klanc
-rm -f $homeDir/.config/i3/config
-cat $homeDir/.dotfiles/configs/i3.conf > $homeDir/.config/i3/config
-cat $homeDir/.dotfiles/sensitive/i3extra.conf >> $homeDir/.config/i3/config

@@ -6,3 +6,11 @@ do
 	sleep 0.001
 	result=`pgrep -l chromium | wc -l`
 done
+pkill -o firefox
+result=`pgrep -l firefox | wc -l`
+while [ "$result" -gt "0" ]
+do
+        sleep 0.001
+        result=`pgrep -l firefox | wc -l`
+done
+
