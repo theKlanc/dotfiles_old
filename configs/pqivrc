@@ -8,10 +8,11 @@ disable-backends=archive,archive_cbx
 end-of-files-action=wrap
 watch-directories=1
 [keybindings]
-1 {command(mv $1 ~/Pictures/);}
-2 {command(mv $1 ~/Pictures/2D/);}
-3 {command(mv $1 ~/Pictures/3D/);}
+1 {command(moveAndLog.sh $1 ~/Pictures/);}
+2 {command(moveAndLog.sh $1 ~/Pictures/2D/);}
+3 {command(moveAndLog.sh $1 ~/Pictures/3D/);}
 <Left> { goto_file_relative(-1); }
 <Right> { goto_file_relative(1); }
-<comma>  { animation_step(-1) }
+<comma>  { animation_step(-1); }
 <Delete> {command(trash $1);}
+<z> {command(undoMove.sh);goto_file_relative(-1);}
